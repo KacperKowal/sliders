@@ -1,0 +1,37 @@
+img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.scrollable {
+    width: 200px;
+    overflow-x: scroll;
+    display: flex;
+    overflow-y: hidden;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+}
+
+.scrollable div {
+    width: 100px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.scrollable img {
+    height: 100%;
+}
+
+.scrollable img:hover {
+    transform: scale(1.1, 1.1);
+}
+
+@media (max-width: 375px) {
+    .scrollable {
+        bottom: 0;
+        right: 50%;
+        transform: translate(50%);
+    }
+}
